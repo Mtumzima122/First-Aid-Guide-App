@@ -1,13 +1,21 @@
 import { Link } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet, View, Text } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { Colors } from '@/constants/theme';
 
 export default function ModalScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
+      <View style={styles.header}>
+        <Text style={styles.title}>Poisoning by swallowing</Text>
+      </View>
+      <Image source={require('@/assets/images/poisoning.png')} style={styles.image} />
+      <ThemedText style={styles.instruction}>Wash your hands.</ThemedText>
+      <ThemedText style={styles.instruction}>
+        Put on gloves or a locally available alternative resistant to the product.
+      </ThemedText>
       <Link href="/" dismissTo style={styles.link}>
         <ThemedText type="link">Go to home screen</ThemedText>
       </Link>
@@ -18,9 +26,30 @@ export default function ModalScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
+    padding: 16,
+    backgroundColor: Colors.light.background,
+  },
+  header: {
+    backgroundColor: Colors.light.tint,
+    padding: 16,
+    borderRadius: 8,
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: Colors.light.text,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'contain',
+    marginBottom: 16,
+  },
+  instruction: {
+    fontSize: 16,
+    color: Colors.light.text,
+    marginBottom: 8,
   },
   link: {
     marginTop: 15,

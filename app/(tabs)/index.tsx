@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View, TouchableOpacity, Text as RNText } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -19,48 +19,25 @@ export default function HomeScreen() {
     <ScrollView style={[styles.container, { backgroundColor: Colors[colorScheme ?? 'light'].background }]}>
       <ThemedView style={styles.header}>
         <ThemedText type="title" style={styles.mainTitle}>
-          First Aid Guides
-        </ThemedText>
-        <ThemedText style={styles.subtitle}>
-          Learn how to respond to common emergencies and injuries
+          What is your emergency?
         </ThemedText>
       </ThemedView>
 
-      <View style={styles.statsContainer}>
-        <View style={styles.statBox}>
-          <ThemedText style={styles.statNumber}>{firstAidGuides.length}</ThemedText>
-          <ThemedText style={styles.statLabel}>Guides</ThemedText>
-        </View>
-        <View style={styles.statBox}>
-          <ThemedText style={styles.statNumber}>24/7</ThemedText>
-          <ThemedText style={styles.statLabel}>Available</ThemedText>
-        </View>
-        <View style={styles.statBox}>
-          <ThemedText style={styles.statNumber}>✓</ThemedText>
-          <ThemedText style={styles.statLabel}>Easy</ThemedText>
-        </View>
-      </View>
-
-      <View style={styles.guidesContainer}>
+      <View style={styles.gridContainer}>
         {firstAidGuides.map((guide) => (
-          <GuideCard
+          <TouchableOpacity
             key={guide.id}
-            id={guide.id}
-            title={guide.title}
-            icon={guide.icon}
-            category={guide.category}
-            description={guide.description}
-            onPress={handleGuidePress}
-          />
+            style={styles.gridItem}
+            onPress={() => handleGuidePress(guide.id)}>
+            <RNText style={styles.gridIcon}>{guide.icon}</RNText>
+            <ThemedText style={styles.gridText}>{guide.title}</ThemedText>
+          </TouchableOpacity>
         ))}
       </View>
 
-      <View style={styles.footer}>
-        <ThemedText style={styles.footerText}>
-          📞 For life-threatening emergencies, call 911 immediately. These guides are for
-          educational purposes only.
-        </ThemedText>
-      </View>
+      <TouchableOpacity style={styles.emergencyButton}>
+        <ThemedText style={styles.emergencyButtonText}>Call the Emergency Services</ThemedText>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -70,59 +47,51 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 12,
+    padding: 16,
+    backgroundColor: Colors.light.tint,
   },
   mainTitle: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: 'bold',
+    color: Colors.light.text,
   },
-  subtitle: {
-    marginTop: 8,
-    fontSize: 14,
-    opacity: 0.7,
-    lineHeight: 20,
-  },
-  statsContainer: {
+  gridContainer: {
     flexDirection: 'row',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 12,
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    padding: 16,
   },
-  statBox: {
-    flex: 1,
+  gridItem: {
+    width: '40%',
     alignItems: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 8,
-    borderRadius: 10,
-    backgroundColor: '#f5f5f5',
+    marginVertical: 10,
+    padding: 10,
+    backgroundColor: Colors.light.background,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
-  statNumber: {
+  gridIcon: {
+    fontSize: 40,
+    marginBottom: 8,
+  },
+  gridText: {
+    marginTop: 8,
+    fontSize: 16,
+    color: Colors.light.text,
+  },
+  emergencyButton: {
+    margin: 16,
+    padding: 16,
+    backgroundColor: Colors.light.tint,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  emergencyButtonText: {
+    color: '#FFF',
     fontSize: 18,
     fontWeight: 'bold',
-  },
-  statLabel: {
-    fontSize: 12,
-    marginTop: 4,
-    opacity: 0.7,
-  },
-  guidesContainer: {
-    paddingHorizontal: 12,
-    paddingBottom: 20,
-  },
-  footer: {
-    marginHorizontal: 16,
-    marginBottom: 20,
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    backgroundColor: '#fffbea',
-    borderLeftWidth: 4,
-    borderLeftColor: '#ff922b',
-    borderRadius: 8,
-  },
-  footerText: {
-    fontSize: 13,
-    lineHeight: 20,
   },
 });

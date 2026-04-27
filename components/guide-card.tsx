@@ -36,7 +36,7 @@ export default function GuideCard({
       style={[
         styles.card,
         {
-          backgroundColor: colorScheme === 'dark' ? '#1f1f1f' : '#ffffff',
+          backgroundColor: colorScheme === 'dark' ? '#000000' : '#ffffff',
           borderColor: categoryColor + '30',
         },
       ]}

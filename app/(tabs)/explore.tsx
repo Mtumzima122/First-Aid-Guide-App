@@ -4,6 +4,8 @@ import {
   StyleSheet,
   View,
   TextInput,
+  TouchableOpacity,
+  Text as RNText,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
@@ -64,6 +66,16 @@ export default function SearchScreen() {
         />
       </View>
 
+      <View style={styles.searchBar}>
+        <TextInput
+          style={styles.searchBar}
+          placeholder="Search"
+          placeholderTextColor={Colors[colorScheme ?? 'light'].icon}
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+        />
+      </View>
+
       {searchQuery.trim() && (
         <View style={styles.resultsContainer}>
           {filteredGuides.length > 0 ? (
@@ -73,15 +85,16 @@ export default function SearchScreen() {
               </ThemedText>
               <View style={styles.guidesContainer}>
                 {filteredGuides.map((guide) => (
-                  <GuideCard
+                  <TouchableOpacity
                     key={guide.id}
-                    id={guide.id}
-                    title={guide.title}
-                    icon={guide.icon}
-                    category={guide.category}
-                    description={guide.description}
-                    onPress={handleGuidePress}
-                  />
+                    style={styles.listItem}
+                    onPress={() => handleGuidePress(guide.id)}>
+                    <RNText style={styles.listIcon}>{guide.icon}</RNText>
+                    <ThemedText style={styles.listText}>{guide.title}</ThemedText>
+                    <TouchableOpacity style={styles.favoriteIcon}>
+                      <RNText style={styles.favoriteStar}>⭐</RNText>
+                    </TouchableOpacity>
+                  </TouchableOpacity>
                 ))}
               </View>
             </>
@@ -143,6 +156,7 @@ export default function SearchScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 16,
   },
   header: {
     paddingHorizontal: 16,
@@ -180,6 +194,15 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     fontSize: 16,
   },
+  searchBar: {
+    height: 40,
+    borderColor: Colors.light.icon,
+    borderWidth: 1,
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    marginBottom: 16,
+    color: Colors.light.text,
+  },
   resultsContainer: {
     paddingHorizontal: 12,
     paddingBottom: 20,
@@ -192,6 +215,33 @@ const styles = StyleSheet.create({
   },
   guidesContainer: {
     marginTop: 8,
+  },
+  listItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 16,
+    marginBottom: 10,
+    backgroundColor: Colors.light.background,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  listText: {
+    fontSize: 16,
+    color: Colors.light.text,
+  },
+  listIcon: {
+    fontSize: 28,
+    marginRight: 12,
+  },
+  favoriteIcon: {
+    padding: 8,
+  },
+  favoriteStar: {
+    fontSize: 24,
   },
   noResults: {
     alignItems: 'center',
