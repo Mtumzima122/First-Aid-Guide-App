@@ -430,6 +430,23 @@ export const firstAidGuides: FirstAidGuide[] = [
       'Clear fluid from nose or ears',
       'Memory loss',
     ],
+    safetyPreparation: [
+      {
+        title: '🧼 Wash Your Hands',
+        explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
+      },
+      {
+        title: '🧤 Wear Gloves',
+        explanation: 'Put on disposable gloves to protect both yourself and the patient.',
+        image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
+      },
+      {
+        title: '📋 Prepare Area',
+        explanation: 'Find a safe place to treat the injured. Have bandages and cloth ready.',
+        image: 'https://images.unsplash.com/photo-1576091160550-112173f31c77?w=300&h=200&fit=crop',
+      },
+    ],
     steps: [
       {
         title: 'Call 911',
@@ -482,6 +499,23 @@ export const firstAidGuides: FirstAidGuide[] = [
       'Cold sweat',
       'Nausea',
     ],
+    safetyPreparation: [
+      {
+        title: '🧼 Wash Your Hands',
+        explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
+      },
+      {
+        title: '🧤 Wear Gloves',
+        explanation: 'Put on disposable gloves to protect both yourself and the patient.',
+        image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
+      },
+      {
+        title: '📞 Call Emergency',
+        explanation: 'Have a phone ready or someone nearby to call 911 immediately.',
+        image: 'https://images.unsplash.com/photo-1586903261405-4b152bad62ae?w=300&h=200&fit=crop',
+      },
+    ],
     steps: [
       {
         title: 'Call 911 immediately',
@@ -523,159 +557,6 @@ export const firstAidGuides: FirstAidGuide[] = [
     icon: '❤️',
   },
   {
-    id: '9',
-    title: 'Allergic Reaction',
-    category: 'Emergency',
-    description: 'Severe allergic reactions can be life-threatening',
-    symptoms: [
-      'Difficulty breathing',
-      'Swelling of face, lips, or throat',
-      'Hives or rash',
-      'Fainting',
-      'Rapid heartbeat',
-    ],
-    steps: [
-      {
-        title: 'Call 911',
-        explanation: 'For severe reaction. Call emergency services immediately.',
-        image: 'https://via.placeholder.com/300x200/DC143C/FFFFFF?text=Call+911',
-      },
-      {
-        title: 'Use EpiPen',
-        explanation: 'If available, use EpiPen injection immediately.',
-        image: 'https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Use+EpiPen',
-      },
-      {
-        title: 'Position person',
-        explanation: 'Lay person down and elevate feet if possible.',
-        image: 'https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Position+Person',
-      },
-      {
-        title: 'Monitor',
-        explanation: 'Monitor breathing and consciousness. Be prepared to perform CPR.',
-        image: 'https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Monitor+Person',
-      },
-      {
-        title: 'Dozi ya pili',
-        explanation: 'Tumia EpiPen ya pili baada ya dakika 5-15 ikiwa inahitajika.',
-        image: 'https://via.placeholder.com/300x200/96CEB4/FFFFFF?text=Dozi+ya+Pili',
-      },
-      {
-        title: 'Uangalifu wa hospitali',
-        explanation: 'Nenda hospitali baada ya kutumia EpiPen.',
-        image: 'https://via.placeholder.com/300x200/F7DC6F/FFFFFF?text=Uangalifu+wa+Hospitali',
-      },
-    ],
-    warnings: [
-      'Anaphylaxis is a medical emergency',
-      'Do not assume it will pass on its own',
-      'Go to hospital after using EpiPen',
-      'Carry your medications if you have severe allergies',
-    ],
-    icon: '⚠️',
-  },
-  {
-    id: '10',
-    title: 'CPR - Cardiopulmonary Resuscitation',
-    category: 'Emergency',
-    description: 'CPR restores blood flow when a person has stopped breathing',
-    symptoms: [
-      'Loss of consciousness',
-      'No breathing',
-      'No heartbeat',
-    ],
-    steps: [
-      {
-        title: 'Call 911',
-        explanation: 'Call emergency services immediately.',
-        image: 'https://via.placeholder.com/300x200/DC143C/FFFFFF?text=Call+911',
-      },
-      {
-        title: 'Position person',
-        explanation: 'Place person on their back on a firm surface.',
-        image: 'https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Position+Person',
-      },
-      {
-        title: 'Position hands',
-        explanation: 'Place the heel of one hand in the center of the chest.',
-        image: 'https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Position+Hands',
-      },
-      {
-        title: 'Perform compressions',
-        explanation: 'Push hard and fast at least 2 inches deep.',
-        image: 'https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Perform+Compressions',
-      },
-      {
-        title: 'Compression rate',
-        explanation: 'Perform 100-120 compressions per minute.',
-        image: 'https://via.placeholder.com/300x200/96CEB4/FFFFFF?text=Compression+Rate',
-      },
-      {
-        title: 'Give breaths',
-        explanation: 'Give rescue breaths if trained, or continue compressions.',
-        image: 'https://via.placeholder.com/300x200/F7DC6F/FFFFFF?text=Give+Breaths',
-      },
-    ],
-    warnings: [
-      'Do not stop CPR until help arrives',
-      'CPR training is essential',
-      'Broken ribs are better than no CPR',
-      'Look for AED while performing CPR',
-    ],
-    icon: '🆘',
-  },
-  {
-    id: '11',
-    title: 'Mifupa Iliyovunjika',
-    category: 'Injuries',
-    description: 'Kuweka sawa ni muhimu kwa uangalizi wa mifupa iliyovunjika',
-    symptoms: [
-      'Maumivu makali',
-      'Uwezo wa kutumia',
-      'Kubadilika umbo wazi',
-      'Uvimbe na kuchubuka',
-    ],
-    steps: [
-      {
-        title: 'Simamisha mwendo',
-        explanation: 'Zuia kiungo kilichoathiriwa mara moja. Usijaribu kurekebisha mfupa uliovunjika.',
-        image: 'https://via.placeholder.com/300x200/DC143C/FFFFFF?text=Simamisha+Mwendo',
-      },
-      {
-        title: 'Apply ice',
-        explanation: 'Use an ice pack wrapped in cloth.',
-        image: 'https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Apply+Ice',
-      },
-      {
-        title: 'Use support',
-        explanation: 'Use a sling or bandage to support the limb.',
-        image: 'https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Use+Support',
-      },
-      {
-        title: 'Inua',
-        explanation: 'Elevate injury above heart level.',
-        image: 'https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Inua+Jeraha',
-      },
-      {
-        title: 'Seek medical help',
-        explanation: 'X-rays are needed to confirm fractures.',
-        image: 'https://via.placeholder.com/300x200/96CEB4/FFFFFF?text=Seek+Medical+Help',
-      },
-      {
-        title: 'Follow up care',
-        explanation: 'Follow doctor\'s instructions for healing.',
-        image: 'https://via.placeholder.com/300x200/F7DC6F/FFFFFF?text=Follow+Up+Care',
-      },
-    ],
-    warnings: [
-      'Do not move severely affected limb',
-      'Do not apply ice directly to skin',
-      'Proper diagnosis requires X-rays',
-      'Seek emergency care for severely broken bones',
-    ],
-    icon: '🦴',
-  },
-  {
     id: '12',
     title: 'Drowning',
     category: 'Emergency',
@@ -685,6 +566,23 @@ export const firstAidGuides: FirstAidGuide[] = [
       'Blue lips',
       'No breathing',
       'Weak or no pulse',
+    ],
+    safetyPreparation: [
+      {
+        title: '🧼 Wash Your Hands',
+        explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
+      },
+      {
+        title: '🧤 Wear Gloves',
+        explanation: 'Put on disposable gloves to protect both yourself and the patient.',
+        image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
+      },
+      {
+        title: '📞 Call Emergency',
+        explanation: 'Have a phone ready or someone nearby to call 911 immediately.',
+        image: 'https://images.unsplash.com/photo-1586903261405-4b152bad62ae?w=300&h=200&fit=crop',
+      },
     ],
     steps: [
       {
