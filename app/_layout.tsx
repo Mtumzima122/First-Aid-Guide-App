@@ -3,9 +3,9 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
-import { Image, StyleSheet, View, Text } from 'react-native';
-import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Colors } from '@/constants/theme';
+import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -23,12 +23,13 @@ export default function RootLayout() {
             headerShown: false,
             header: () => (
               <View style={styles.bannerContainer}>
-                <Image source={require('@/assets/images/emergency-banner.png')} style={styles.bannerImage} />
+                <Image source={require('../assets/images/icon.png')} style={styles.bannerImage} />
                 <Text style={styles.bannerText}>FIRST AID IN EMERGENCY</Text>
               </View>
             ),
           }}
         />
+        {/* require('../assets/images/poisoning.png') */}
         <Stack.Screen
           name="guide/[id]"
           options={{

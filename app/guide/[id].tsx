@@ -300,7 +300,7 @@ export default function GuideDetailScreen() {
       <View style={styles.footer}>
         <ThemedText style={styles.footerText}>
           ℹ️ This app provides basic first aid information. Always seek professional medical help
-          for serious injuries or emergencies. Call emergency services (911 in US) immediately for
+          for serious injuries or emergencies. Call emergency services 911 in US immediately for
           life-threatening situations.
         </ThemedText>
       </View>

@@ -19,7 +19,7 @@ export default function HomeScreen() {
     <ScrollView style={[styles.container, { backgroundColor: Colors[colorScheme ?? 'light'].background }]}>
       <ThemedView style={styles.header}>
         <ThemedText type="title" style={styles.mainTitle}>
-          What is your emergency?
+          Changamoto yako ni ipi
         </ThemedText>
       </ThemedView>
 
@@ -36,7 +36,7 @@ export default function HomeScreen() {
       </View>
 
       <TouchableOpacity style={styles.emergencyButton}>
-        <ThemedText style={styles.emergencyButtonText}>Call the Emergency Services</ThemedText>
+        <ThemedText style={styles.emergencyButtonText}>Piga Simu ya dharura</ThemedText>
       </TouchableOpacity>
     </ScrollView>
   );

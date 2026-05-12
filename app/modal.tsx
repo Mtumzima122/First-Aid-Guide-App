@@ -1,5 +1,5 @@
 import { Link } from 'expo-router';
-import { Image, StyleSheet, View, Text } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
@@ -11,7 +11,7 @@ export default function ModalScreen() {
       <View style={styles.header}>
         <Text style={styles.title}>Poisoning by swallowing</Text>
       </View>
-      <Image source={require('@/assets/images/poisoning.png')} style={styles.image} />
+      <Image source={require('../assets/images/react-logo.png')} style={styles.image} />
       <ThemedText style={styles.instruction}>Wash your hands.</ThemedText>
       <ThemedText style={styles.instruction}>
         Put on gloves or a locally available alternative resistant to the product.

@@ -65,7 +65,7 @@ export default function SearchScreen() {
           onChangeText={setSearchQuery}
         />
       </View>
-
+{/* 
       <View style={styles.searchBar}>
         <TextInput
           style={styles.searchBar}
@@ -74,7 +74,7 @@ export default function SearchScreen() {
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
-      </View>
+      </View> */}
 
       {searchQuery.trim() && (
         <View style={styles.resultsContainer}>
