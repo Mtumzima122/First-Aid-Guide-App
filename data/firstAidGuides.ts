@@ -1,14 +1,18 @@
+
+//database
 export interface FirstAidGuide {
   id: string;
   title: string;
   category: string;
   description: string;
   symptoms: string[];
+
   safetyPreparation: {
-    title: string;
-    explanation: string;
-    image: string;
+  title: string;
+  explanation: string;
+  image: string;
   }[];
+
   steps: {
     title: string;
     explanation: string;
@@ -18,6 +22,7 @@ export interface FirstAidGuide {
   icon: string;
 }
 
+//English version
 // export const firstAidGuides: FirstAidGuide[] = [
 //   {
 //     id: '1',
@@ -31,7 +36,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid. This prevents infection.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -98,7 +103,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid. This prevents infection.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -166,7 +171,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water. Choking emergencies happen quickly.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -225,7 +230,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -294,7 +299,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid to poisoning victims.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -363,7 +368,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -432,7 +437,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -501,7 +506,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -569,7 +574,7 @@ export interface FirstAidGuide {
 //     ],
 //     safetyPreparation: [
 //       {
-//         title: '🧼 Wash Your Hands',
+//         title: ' Wash Your Hands',
 //         explanation: 'Wash your hands thoroughly with soap and water before providing first aid.',
 //         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
 //       },
@@ -626,7 +631,7 @@ export interface FirstAidGuide {
 //   },
 // ];
 
-
+//swahili version
 export const firstAidGuides: FirstAidGuide[] = [
   {
     id: '1',
@@ -640,24 +645,24 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa huduma ya kwanza. ',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
       {
-        title: '🧤 Vaa Glavu',
+        title: ' Vaa Glavu',
         explanation: 'Vaa glavu za kutupa ili kulinda wewe mwenyewe na aliepata ajali ya moto .',
         image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
       },
       {
-        title: '⚠️ Hakikisha Usalama',
+        title: ' Hakikisha Usalama',
         explanation: 'Hakikisha mazingira ni salama. Mwondoe mtu kutoka chanzo cha Moto kama kuna moto au joto.',
         image: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=300&h=200&fit=crop',
       },
     ],
     steps: [
       {
-        title: 'Simamisha kuungua',
+        title: 'Zima motot na muondoe na eneo la moto',
         explanation: 'Mwondoe mtu kutoka chanzo cha joto mara moja ili kusimamisha kuungua kuendelea. Kama ni moto, zima moto ikiwezekana. Kama ni kemikali, vua nguo zilizoathiriwa na suuza kemikali kutoka ngozini.',
         image: 'https://images.unsplash.com/photo-1587973714300-c8407e82c857?w=300&h=280&fit=crop',
       },
@@ -707,7 +712,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza. Hii inazuia maambukizi.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -775,7 +780,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji. Dharura za kukabwa hutokea haraka.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -834,7 +839,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -884,8 +889,6 @@ export const firstAidGuides: FirstAidGuide[] = [
     warnings: [
       'Usisogeze kiungo kilichojeruhiwa kupita kiasi',
       'Usitumie barafu moja kwa moja kwenye ngozi',
-      'Tafuta huduma ya dharura kwa mivunjiko mikali',
-      'X-rays zinahitajika kuthibitisha mivunjiko',
     ],
     icon: '🦴',
   },
@@ -903,12 +906,12 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza kwa waathirika wa sumu.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
       {
-        title: '🧤 Vaa Glavu',
+        title: ' Vaa Glavu kama huna tumia mfuko wa plastiki mlaini ',
         explanation: 'Vaa glavu za kutupa ili kuepuka kuwasiliana na vitu vya sumu au vifaa vilivyochafuliwa.',
         image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
       },
@@ -923,11 +926,6 @@ export const firstAidGuides: FirstAidGuide[] = [
         title: 'Piga Simu Kituo cha Sumu',
         explanation: 'Piga simu mara moja kwa ushauri wa wataalamu. Nchini Marekani, piga 1-800-222-1222.',
         image: 'https://images.unsplash.com/photo-1586903261405-4b152bad62ae?w=300&h=280&fit=crop',
-      },
-      {
-        title: 'Tambua sumu',
-        explanation: 'Eleza kilichomezwa, kiasi, na wakati. Hii husaidia wataalamu kuamua hatua za kuchukua.',
-        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&h=280&fit=crop',
       },
       {
         title: 'Mwondoe kutoka chanzo',
@@ -972,7 +970,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1041,7 +1039,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1110,7 +1108,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1178,7 +1176,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono Yako',
+        title: ' Nawa Mikono Yako',
         explanation: 'Nawa mikono yako vizuri kwa sabuni na maji kabla ya kutoa msaada wa kwanza.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1246,7 +1244,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono',
+        title: ' Nawa Mikono',
         explanation: 'Nawa mikono yako kwa sabuni na maji kabla ya kutoa msaada.',
         image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
       },
@@ -1314,7 +1312,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Safisha mikono',
+        title: ' Safisha mikono',
         explanation: 'Tumia sabuni na maji au kiua vijidudu kabla ya kusaidia.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1382,7 +1380,7 @@ export const firstAidGuides: FirstAidGuide[] = [
     ],
     safetyPreparation: [
       {
-        title: '🧼 Nawa Mikono',
+        title: ' Nawa Mikono',
         explanation: 'Angalia usafi kabla ya kusaidia, hasa kwa majeraha ya damu.',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop',
       },
@@ -1392,7 +1390,7 @@ export const firstAidGuides: FirstAidGuide[] = [
         image: 'https://images.unsplash.com/photo-1584308666744-24d5f15714ae?w=300&h=200&fit=crop',
       },
       {
-        title: 'Piga simu dharura',
+        title: 'Piga simu ya dharura',
         explanation: 'Mshtuko unahitaji huduma ya haraka. Piga simu 911 au nambari ya dharura.',
         image: 'https://images.unsplash.com/photo-1586903261405-4b152bad62ae?w=300&h=200&fit=crop',
       },
@@ -1409,7 +1407,7 @@ export const firstAidGuides: FirstAidGuide[] = [
         image: 'https://images.unsplash.com/photo-1579154204601-01d7e79f40be?w=300&h=280&fit=crop',
       },
       {
-        title: 'Angalia pumzi',
+        title: 'Angalia Upumaiji',
         explanation: 'Thibitisha kama mtu ana pumzi na mapigo. Punguza mgongoni kwa tahadhari.',
         image: 'https://images.unsplash.com/photo-1631563436975-ab7cc9ac0908?w=300&h=280&fit=crop',
       },

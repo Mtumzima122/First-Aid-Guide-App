@@ -126,24 +126,21 @@ export default function SearchScreen() {
             <ThemedText style={styles.suggestionsTitle}>Popular searches:</ThemedText>
             <View style={styles.suggestionsList}>
               <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>Burns</ThemedText>
+                <ThemedText style={styles.suggestionText}>Kuungua</ThemedText>
               </View>
               <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>Cuts</ThemedText>
+                <ThemedText style={styles.suggestionText}>Kukatwa</ThemedText>
               </View>
               <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>Choking</ThemedText>
+                <ThemedText style={styles.suggestionText}>Kukabwa</ThemedText>
               </View>
             </View>
             <View style={styles.suggestionsList}>
               <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>Fractures</ThemedText>
+                <ThemedText style={styles.suggestionText}>Kuvunjika</ThemedText>
               </View>
               <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>CPR</ThemedText>
-              </View>
-              <View style={styles.suggestionChip}>
-                <ThemedText style={styles.suggestionText}>Heart</ThemedText>
+                <ThemedText style={styles.suggestionText}>moyo</ThemedText>
               </View>
             </View>
           </View>

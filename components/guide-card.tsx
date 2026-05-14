@@ -3,7 +3,6 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { ThemedText } from './themed-text';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
-
 interface GuideCardProps {
   id: string;
   title: string;
@@ -12,7 +11,6 @@ interface GuideCardProps {
   description: string;
   onPress: (id: string) => void;
 }
-
 export default function GuideCard({
   id,
   title,
@@ -64,7 +62,6 @@ export default function GuideCard({
     </TouchableOpacity>
   );
 }
-
 const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
