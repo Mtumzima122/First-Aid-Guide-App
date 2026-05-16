@@ -1,13 +1,12 @@
 import { BottomTabBarButtonProps } from '@react-navigation/bottom-tabs';
 import { PlatformPressable } from '@react-navigation/elements';
 import * as Haptics from 'expo-haptics';
-
-/**
- * A bottom tab button wrapper that adds gentle haptic feedback on iOS.
- *
- * This component forwards all tab button props to the underlying
- * PlatformPressable and invokes the original onPressIn handler after
- * triggering haptic feedback.
+/*
+  A bottom tab button wrapper that adds gentle haptic feedback on iOS
+ 
+  This component forwards all tab button props to the underlying
+  PlatformPressable and invokes the original onPressIn handler after
+  triggering haptic feedback.
  */
 export function HapticTab({ onPressIn, ...restProps }: BottomTabBarButtonProps) {
   const handlePressIn = (event: Parameters<NonNullable<BottomTabBarButtonProps['onPressIn']>>[0]) => {

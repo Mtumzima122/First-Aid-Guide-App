@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View, TouchableOpacity, Image } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
 import { firstAidGuides } from '@/data/firstAidGuides';
+import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import React, { useState } from 'react';
+import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 export default function GuideDetailScreen() {
   const { id } = useLocalSearchParams();
@@ -250,7 +250,11 @@ export default function GuideDetailScreen() {
           {currentStepData.image && (
             <View style={styles.imageContainer}>
               <Image
-                source={{ uri: currentStepData.image }}
+                source={
+                  typeof currentStepData.image === 'string'
+                    ? { uri: currentStepData.image }
+                    : currentStepData.image
+                }
                 style={styles.stepImage}
                 resizeMode="cover"
               />
